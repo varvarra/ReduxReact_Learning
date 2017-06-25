@@ -1,9 +1,9 @@
 import React from 'react';
 //   Argument below - video object is the same as saying this: const video = props.video
-const VideoListItem = ({video}) => {
+const VideoListItem = ({video, onVideoSelect}) => {
   const imageUrl = video.snippet.thumbnails.default.url;
   return (
-    <li className = 'list-group item'>
+    <li onClick={()=>{onVideoSelect(video)}} className = 'list-group-item'>
       <div className='video-list media'>
 
         <div className='media-left'>
